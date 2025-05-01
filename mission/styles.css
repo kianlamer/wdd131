@@ -14,7 +14,13 @@ body {
     font-family: 'Times New Roman', Times, serif;
     padding: 3em;
 }
-
+.dark {
+    background-color: #333;
+    color:white;
+}
+.dark h2 {
+    color:rgb(160,212, 237)
+}
 .title {
     text-align: center;
 }
