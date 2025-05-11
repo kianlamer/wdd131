@@ -1,0 +1,103 @@
+ @import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+
+ :root {
+ --primary-color: #52489c;
+ --secondary-color: #59c3c3;
+ --accent-color: #f45b69;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --primary-font: Arial, Helvetica,sans-serif;
+ --secondary-font: Mooli, san-serif;
+ }
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1em 0;
+}
+
+a:link,
+a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+}
+
+/* Style the "Menu" button */
+header button {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+}
+
+.gallery figure {
+    margin: 0.5em;
+}
+
+.gallery img {
+    border: 8px solid white;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px #6f7364;
+    max-width: 100%; /* Make images responsive */
+}
+
+footer {
+    margin-top: 2em;
+}
+
+/* Media query for screens wider than 700px */
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Media query for screens wider than 1000px */
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+
+    header button.menu-button {
+        display: none; /* Hide the menu button */
+    }
+
+    nav ul.menu {
+        display: flex; /* Display the menu horizontally */
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul.menu li {
+        margin: 0 1em;
+    }
+}
