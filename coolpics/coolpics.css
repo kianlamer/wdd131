@@ -10,6 +10,9 @@
  --secondary-font: Mooli, san-serif;
  }
 
+.content {
+    text-align:center;
+}
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
