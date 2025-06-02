@@ -123,7 +123,8 @@ main {
 .book .details {
   color: var(--dark);
   font-size: 0.95rem;
-  text-align: left;
+  text-align: right;
+  line-height: .5;
 }
 
 .book h2 {
@@ -136,6 +137,8 @@ main {
   max-width: 120px;
   border-radius: 4px;
   margin-bottom: 0.5rem;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Filter box styling */

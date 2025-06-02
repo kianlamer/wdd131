@@ -14,7 +14,7 @@ const articles = [
 	{
 		id: 2,
 		title: 'Magnus Chase Book One: Sword of Summer',
-		date: 'December 12, 2021',
+		date: 'Dec 12, 2021',
 		description:
 			'The anticipated new novel by Rick Riordan. After Greek mythology (Percy Jackson), Greek/Roman (Heroes of Olympus), and Egyptian (Kane Chronicles), Rick decides to try his hand with Norse Mythology, and the end result is good.',
 		imgSrc:
@@ -23,5 +23,44 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+			"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+			"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
 	}
 ]
+
+function renderArticles() {
+    const container = document.querySelector('#blog-articles');
+    container.innerHTML = ''; // Clear any existing content
+
+    articles.forEach(article => {
+        const articleElem = document.createElement('article');
+        articleElem.classList.add('book');
+        articleElem.innerHTML = `
+            <div class="details">
+                <em><p>${article.date}</p></em>
+                <p>${article.ages}</p>
+                <p>${article.genre}</p>
+                <p>${article.stars}</p>
+            </div>
+            <article>
+                <h2>${article.title}</h2>
+                <img src="${article.imgSrc}" alt="${article.imgAlt}">
+                <p>${article.description}</p>
+            </article>
+        `;
+        container.appendChild(articleElem);
+    });
+}
+
+renderArticles();
