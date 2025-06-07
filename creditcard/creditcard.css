@@ -97,7 +97,6 @@ img.card-image {
     border-radius: 5px;
     font-weight: 400;
     outline: none;
-    border: 2px solid #151515;
     cursor: pointer;
     z-index: 10;
     margin-top:10px;
