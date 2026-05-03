@@ -38,3 +38,8 @@ img {
     width: 50%;
     margin: 0 auto;
 }
+
+.background {
+    background-color:#000;
+    color: white;
+}
